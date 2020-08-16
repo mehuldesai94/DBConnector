@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
 
 let userSchema = new Schema({
@@ -18,4 +17,5 @@ let userSchema = new Schema({
     country: String
 })
 
-module.exports = mongoose.model('userSchema', userSchema);
+//module.exports = mongoose.model('userSchema', userSchema);
+module.exports = userSchema;
