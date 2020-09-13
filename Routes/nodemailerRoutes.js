@@ -22,6 +22,10 @@ gmailtrnsporter.verify((error, success) => {
         console.log('Server is ready to send message');
 });
 
+nodemailerRoute.route('/').get((req, res) => {
+    res.json('Node Mailer Path succesfully deployed !!');
+});
+
 nodemailerRoute.post('/send', (req, res, next) => {
     var name = req.body.name;
     var email = req.body.email;
