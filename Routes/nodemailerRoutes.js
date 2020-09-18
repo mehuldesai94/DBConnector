@@ -45,11 +45,7 @@ nodemailerRoute.post('/send', (req, res, next) => {
 
     gmailtrnsporter.sendMail(mail, (err, data) => {
         if (err) {
-            res.json(err
-            //     {
-            //     status: 'fail'
-            // }
-            )
+            res.json(err)
         } else {
             res.json({
                 status: 'success'
