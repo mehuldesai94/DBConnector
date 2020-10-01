@@ -3,7 +3,6 @@ const cors = require('cors'); //help to call over http, https
 const bodyParser = require('body-parser'); //parsing data
 const morgan = require('morgan'); //server status
 
-
 const userRoute = require('./Routes/userRoutes');
 const nodemailerRoute = require('./Routes/nodemailerRoutes');
 const config = require('./config/config')
@@ -38,7 +37,7 @@ app.use('/mail', nodemailerRoute)
 
 //Home Route
 app.get("/", (req, res) => {
-    res.send("Welcome to Mehul's main NODE.JS API...");
+    res.sendFile('home/home.html', {root: __dirname});
   });
 
 
